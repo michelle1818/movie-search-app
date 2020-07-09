@@ -11,7 +11,7 @@ Coming soon...
 # Features
 
 - Search for movies based on title
-- View release date, rating, and summary about movie
+- View release date, rating, and synopsis
 
 ## Available Scripts
 
