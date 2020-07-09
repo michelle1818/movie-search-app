@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MovieCard from "./movieCard";
+import Grid from "@material-ui/core/Grid";
 
 export default function SearchMovies() {
   //states- input query, movies
@@ -39,12 +40,17 @@ export default function SearchMovies() {
           Search
         </button>
       </form>
+
       <div className="card-list">
-        {movies
-          .filter(movie => movie.poster_path)
-          .map(movie => (
-            <MovieCard movie={movie} key={movie.id} />
-          ))}
+        <Grid container spacing={3}>
+          {movies
+            .filter(movie => movie.poster_path)
+            .map(movie => (
+              <Grid item xs={4}>
+                <MovieCard movie={movie} key={movie.id} />
+              </Grid>
+            ))}
+        </Grid>
       </div>
     </>
   );
